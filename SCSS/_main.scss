@@ -262,6 +262,8 @@ body {
     margin-bottom: 15px;
     transition: 0.2s ease-in-out;
     box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 
 
@@ -421,13 +423,6 @@ body {
                 margin-top: 15px;
                 font-family: HelveticaNeue-Light;
             }
-            .enviar{
-                color: $color-dark;
-                background: $color-two;
-                max-width: min-content;
-                align-self: flex-end;
-                border: solid 1px $color-seven;
-            }
             .form{
                 @include column;
                 .form--position{
@@ -439,6 +434,22 @@ body {
                     border: $color-six;
                     border-radius: 3px;
                 }
+                
+            }
+        }
+        .form-botones{
+            @include column;
+            justify-content: center;
+            justify-items: center;
+            margin-bottom: 30px;
+            .enviar{
+                color: $color-dark;
+                background: $color-two;
+                max-width: min-content; 
+                align-self: flex-end;
+                border: solid 1px $color-seven;
+                margin: 15px;
+                
             }
         }
     }

@@ -556,9 +556,15 @@
                                 <input class="form--position" type="email" name="email" placeholder="E-mail">
                                 <input class="form--position" type="tell" name="telefono"
                                     placeholder="Número de teléfono">
-                                    <button type="button" class="btn btn-warning enviar">Enviar</button>
-                            </form>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. maiores ipsam optio at non.</p>
+                                </form>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. maiores ipsam optio at non.</p>
+                        </div>
+                        <!--Captcha-->
+                        <div class="form-botones">
+                                <form action="?" method="POST">
+                                    <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                                </form>
+                                <button type="button" class="btn btn-warning enviar">Enviar</button>
                         </div>
                     </div>
                 </div>
@@ -566,14 +572,6 @@
         </section>
     </div>
 
-    <!--Captcha-->
-    <div text align="Center">
-        <form action="?" method="POST">
-            <div class="g-recaptcha" data-sitekey="your_site_key"></div>
-            <br />
-            <input type="submit" value="Submit">
-        </form>
-    </div>
     <!--Formulario para registrarse a las conferencias-->
     <div class="overlay-2 active" id="overlay-2">
         <div class="popup" id="popup">

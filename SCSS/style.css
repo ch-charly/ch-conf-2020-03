@@ -367,6 +367,8 @@ body {
   transition: 0.2s ease-in-out;
   -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .tz-gallery .lightbox img:hover {
@@ -588,17 +590,6 @@ body {
   font-family: HelveticaNeue-Light;
 }
 
-.sponsors .sponsors-position .formulario .enviar {
-  color: #121212;
-  background: #E4FF22;
-  max-width: -webkit-min-content;
-  max-width: -moz-min-content;
-  max-width: min-content;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  border: solid 1px #FFFF00;
-}
-
 .sponsors .sponsors-position .formulario .form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -617,6 +608,33 @@ body {
   background-color: #CDCDCD;
   border: #CDCDCD;
   border-radius: 3px;
+}
+
+.sponsors .sponsors-position .form-botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  margin-bottom: 30px;
+}
+
+.sponsors .sponsors-position .form-botones .enviar {
+  color: #121212;
+  background: #E4FF22;
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border: solid 1px #FFFF00;
+  margin: 15px;
 }
 
 .footer {
