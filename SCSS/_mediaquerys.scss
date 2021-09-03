@@ -19,8 +19,10 @@
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
     .banner-completo{
-        h2{
-            max-width: 35%;
+        .banner{
+            h2{
+                max-width: 85%;
+            }
         }
     }
   }
@@ -72,7 +74,11 @@
                 }
             }
     }
-    
+    .speakers{
+        h3{
+            max-width: 35%;
+        }
+    }
         /*Agenda*/
     .agenda {
             .agenda--completa{

@@ -646,6 +646,10 @@ body {
   text-decoration: none;
 }
 
+.footer .footer--columnas ul li a:hover {
+  color: #8E8E8E;
+}
+
 .footer .footer--columnas .color {
   color: #E4FF22;
 }
@@ -662,6 +666,14 @@ body {
       -ms-flex-pack: start;
           justify-content: flex-start;
   justify-items: left;
+}
+
+.icons a {
+  color: #F5F5F5;
+}
+
+.icons a:hover {
+  color: #8E8E8E;
 }
 
 .icons .ico {
@@ -694,8 +706,8 @@ body {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .banner-completo h2 {
-    max-width: 35%;
+  .banner-completo .banner h2 {
+    max-width: 85%;
   }
 }
 
@@ -760,6 +772,9 @@ body {
   .cartel .cartel-position p {
     margin-left: 80px;
     margin-right: 80px;
+  }
+  .speakers h3 {
+    max-width: 35%;
   }
   /*Agenda*/
   .agenda .agenda--completa {

@@ -456,6 +456,9 @@ body {
                 a{
                     color: $color-tree;
                     text-decoration: none;
+                    &:hover{
+                        color: $color-nine;
+                    }
                 }
             }
         }
@@ -469,6 +472,12 @@ body {
     @include row;
     justify-content: flex-start;
     justify-items: left;
+    a{
+        color: $color-tree;
+        &:hover{
+            color: $color-nine;
+        }
+    }
     .ico{
         padding: 5px;
         margin: 10px;
