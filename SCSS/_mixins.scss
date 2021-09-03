@@ -1,0 +1,30 @@
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+@mixin row {
+    display: flex;
+    flex-direction: row;
+}
+@mixin title-light {
+    color: $color-tree;
+}
+@mixin button-registrarme{
+    background-color: $color-two;
+    color: $color-dark;
+    font-family: HelveticaNeue-Light;
+    border: $color-two solid 2px;
+    a:active{
+        color: $color-seven;
+    }
+    a:hover {
+        color: $color-seven;
+        border: $color-seven;
+    }
+    
+}
+@mixin button-ver_agenda{
+    background-color: $color-dark;
+    color: $color-five;
+    font-family: HelveticaNeue-Light;
+}

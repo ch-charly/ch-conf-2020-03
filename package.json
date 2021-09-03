@@ -1,0 +1,20 @@
+{
+  "name": "ch-conf-2021-03-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderhouseit/ch-conf-2021-03.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coderhouseit/ch-conf-2021-03/issues"
+  },
+  "homepage": "https://github.com/coderhouseit/ch-conf-2021-03#readme"
+}

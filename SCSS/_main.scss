@@ -1,0 +1,477 @@
+@import "variables";
+@import "mixins";
+
+@font-face {
+    font-family: 'Gobold';
+    src: url(../FUENTES/Gobold.otf);
+}
+@font-face {
+    font-family: 'Gobold-Bold';
+    src: url(../FUENTES/Gobold-Bold.otf);
+}
+@font-face {
+    font-family: 'HelveticaNeue-Bold';
+    src: url(../FUENTES/HelveticaNeue-Bold.ttf);
+}
+@font-face {
+    font-family: 'HelveticaNeue-Light';
+    src: url(../FUENTES/HelveticaNeue-Light.ttf);
+}
+@font-face {
+    font-family: 'HelveticaNeue-Medium';
+    src: url(../FUENTES/HelveticaNeue-Medium.ttf);
+}
+@font-face {
+    font-family: 'HelveticaNeue-Thin';
+    src: url(../FUENTES/HelveticaNeue-Thin.ttf);
+}
+@font-face {
+    font-family: 'HelveticaNeue-Ultralight';
+    src: url(../FUENTES/HelveticaNeue-Ultralight.ttf);
+}
+
+body {
+    background-image:linear-gradient(to top, #ecedee 0%, #eceeef 75%, #e7e8e9 100%);
+    min-height: 100vh;
+    font: normal 16px sans-serif;
+   
+}
+
+
+   
+/*Nav*/
+#navbar{
+    background-color: $background-dark !important;
+    .navbar-button{
+        color: #fff;
+    }
+    .letra{
+        color: $color-tree !important;
+        font-family: Gobold-Bold;
+        text-transform: $text-transform;
+    }
+    .letras{
+        font-family: HelveticaNeue-Light;
+        color: #E6E6E6;
+    }
+}
+
+.button-registrarme {
+    @include button-registrarme;
+    &:active {
+        color: $color-dark;
+        background-color: $color-seven;
+        border: $color-seven solid 2px;
+    }
+
+    button{
+        color: $color-dark;
+        a{
+            outline: none;
+            text-decoration: none;
+        }
+        &:active {
+            color: $color-dark;
+            background-color: $color-seven;
+            border: $color-seven solid 2px;
+        }
+
+    }
+}
+/*Banner, logo botones*/
+.banner-completo {
+    background-color: $background-dark;
+    background-image: url(../IMG/fondo.png);
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 50px;
+    @include column;
+    justify-content: center;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    /*Modificar mediciones del gif*/
+    .banner-img{
+        img{
+            height: 400px; 
+            width: 400px;
+            max-width: content;
+            max-height: content;
+        }
+    }
+    .banner {
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-bottom: 50px;
+        h2 {
+            color: $color-tree;
+            margin-top: 20px;
+            text-transform: $text-transform;
+            text-shadow: 10px 10px 20px rgba(164, 0, 241, 0.7);
+            font-family: Gobold-Bold;
+            font-size: 4rem;
+            max-width: 53%;
+        }
+        label{
+            margin-top: 20px;
+            color: $color-tree;
+            font-family: HelveticaNeue-Light;
+        }
+        .banner-sub{
+            @include column;
+            margin-bottom: 20px;
+            font-family: Gobold;
+            label{
+                margin-top: 5px;
+                color: $color-two;
+                text-transform: $text-transform;
+            }
+        }
+        .banner-buttons {
+            text-align: center;
+            .banner--button__registrarme{
+                @include button-registrarme;
+                &:active {
+                    color: $color-dark;
+                    background-color: $color-seven;
+                    border: $color-seven solid 2px;
+                }
+
+                button{
+                    color: $color-dark;
+                    a{
+                        outline: none;
+                        text-decoration: none;
+                    }
+                    &:active {
+                        color: $color-dark;
+                        background-color: $color-seven;
+                        border: $color-seven solid 2px;
+                    }
+            
+                }
+            }
+            .banner--button__ver_agenda{
+                @include button-ver_agenda;
+                border: $color-five solid 2px;
+                button{
+                    border: none;
+                }
+            }
+            button{
+                font-size: 1.5rem;
+                padding: 10px;
+                margin: 15px;
+                border: none;
+                
+            }
+            @include column;
+            justify-content: space-evenly;
+            
+        }
+    }
+}
+
+/*Cartel*/
+.cartel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-tree;
+    
+    .cartel-position{
+        label{
+            font-size: 2rem;
+            color: $color-five;
+            font-family: Gobold;
+        }
+        p{
+            font-size: 1rem;
+            text-align: justify;
+            padding-bottom: 20px;
+            margin: 10px;
+            color: $color-tree;
+            font-family: Gobold;
+        }
+        padding: 15px;
+        text-align: left;
+        text-transform: $text-transform;
+        background-color: $color-dark;
+        @include column;
+        align-items: center;
+        justify-content: center;
+        .cartel-position-one{
+            @include column;
+            .color{
+                color: $color-two;
+                text-transform: $text-transform;
+            }
+        }
+        .cartel-position-two{
+            @include column;
+            .color{
+                color: $color-two;
+                text-transform: $text-transform;
+            } 
+        }
+    }
+}
+
+/*Seccion de Speakers*/
+.speakers{
+    padding-top: 40px;
+    h3{
+        color: $color-dark;
+        text-transform: $text-transform;
+        font-family: Gobold;
+        font-size: 2rem;
+        margin-left: px;
+        padding-top: 15px;
+        text-align: left;   
+        max-width: 40%; 
+    }
+    p{
+        color: $color-four;
+        margin-left: 10px;
+        font-family: Gobold;
+        max-width: 50%;
+    }
+}
+/*Seccion galeria*/
+.container.gallery-container {
+    color: #35373a;
+    min-height: 100vh;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+   
+}
+.gallery-container p.page-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 15px auto;
+    color: #888;
+    font-size: 18px;
+}
+
+.tz-gallery {
+    padding: 40px;
+    
+}
+
+.tz-gallery .lightbox img {
+    width: 100%;
+    margin-bottom: 15px;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+
+.tz-gallery .lightbox img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.tz-gallery img {
+    border-radius: 15px;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+.info-img{
+    .pNomApe{
+        color: $color-five;
+        font-family: $title-font;
+    }
+    .pEmp{
+        color: $color-eigth;
+        font-family: HelveticaNeue-Light;
+        font-weight: 500;
+        line-height: 19px;
+    }
+    .pOcupacion{
+        color: $color-nine;
+        font-family: HelveticaNeue-Light;
+    }
+    p{
+        margin-left: 20px;
+        max-width: 100%;
+        
+    }
+    @include column;
+    justify-content: center;
+    text-align: center;
+}
+
+
+@media(max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .container.gallery-container {
+        border-radius: 15px;
+    }
+}
+
+
+/*Agenda*/
+.agenda {
+    background-color: $color-dark;
+    h3{
+        color: $color-tree;
+        text-transform: $text-transform;
+        font-size: 2rem;
+        margin-left: 50px;
+        padding-top: 25px;
+        font-family: Gobold;
+    }
+
+}
+.agenda--completa{
+    background-color: $color-dark;
+    color: #fff;
+    margin: 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    ul{
+        list-style: none;
+        text-align: center;
+    }
+}
+.agenda--hyi{
+   
+    background-color: $color-dark;
+    color: #fff;
+    @include row;
+    .agenda--hora{
+        label{
+            font-size: 1.2rem;
+            padding-top: 25px;
+            font-family: Gobold-Bold;
+        }
+        align-content: flex-start;
+        text-align: left;
+    }
+    .animado{
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    .agenda--info{
+        .charla{
+            @include column;
+            .titulo-charla{
+                @include column;
+                b{
+                    color: $color-two;
+                }
+            }
+            text-align: left;
+            align-items: stretch;
+            justify-content: space-around;
+            padding: 20px;
+            margin-left: 30px;
+            font-family: HelveticaNeue-Light;
+        
+        }
+    }
+    
+}
+.sponsors {
+    .speakers--title{
+        .speaker--bot{
+            padding-top: 5px;
+        }
+    }
+    h3{
+        color: $color-dark;
+        text-transform: $text-transform;
+        font-size: 2rem;
+        margin-left: 50px;
+        margin-top: 50px;
+        font-family: Gobold;
+
+    }
+    .sponsors-position{
+        .titulo-form{
+            @include row;
+            text-align: center;
+            label{
+                margin: 15px;
+                font-size: 1.5rem;
+                color: $color-five;
+                font-family: Gobold;
+            }
+            p{
+                margin: 20px;
+                
+                color: $color-four;
+                font-family: HelveticaNeue-Light;
+            }
+            .flecha{
+                margin-top: 20px;
+            }
+        }
+        @include column;
+        align-items: center;
+        .formulario{
+            font-size: 1.2rem;
+            margin-left: 30px;
+            p{
+                margin-top: 15px;
+                font-family: HelveticaNeue-Light;
+            }
+            .form{
+                @include column;
+                .form--position{
+                    padding: 25px;
+                    padding-left: 40px;
+                    margin: 10px;
+                    text-align: left;
+                    background-color: $color-six;
+                    border: $color-six;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+}
+.footer {
+    label{
+        padding-left: 30px;
+    }
+    padding-top: 10px;
+    background-color: $color-dark;
+    font-size: 18px;
+    .footer--columnas{
+        @include column;
+        background-color: $color-dark;
+        color: $color-tree;
+        justify-content: flex-start;
+        align-content: flex-start;
+        ul {
+            list-style: none;
+            font-size: 14px;
+            li{
+                a{
+                    color: $color-tree;
+                    text-decoration: none;
+                }
+            }
+        }
+        font-family: HelveticaNeue-Light;
+        .color{
+            color: $color-two;
+        } 
+    }
+}
+.icons{
+    @include row;
+    justify-content: flex-start;
+    justify-items: left;
+    .ico{
+        padding: 5px;
+        margin: 10px;
+
+    }
+}
