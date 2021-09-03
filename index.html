@@ -8,7 +8,8 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -26,7 +27,7 @@
                         <div class="container-fluid">
                             <a class="navbar-brand letra" href="#">Coder House</a>
                             <!--<div class="button-registrarme .d-block .d-sm-none">
-                                <a href=""><button class="button-registrarme .d-block .d-sm-none">Registrarme</button></a>
+                                <a href=""><button id="btn-abrir-popup" class="button-registrarme btn-abrir-popup"">Registrarme</button></a>
                             </div>-->
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
@@ -46,7 +47,7 @@
                                     </li>
                                 </ul>
                                 <div class="button-registrarme .d-block">
-                                    <button class="button-registrarme">Registrarme</button>
+                                    <button id="btn-abrir-popup" class="button-registrarme btn-abrir-popup">Registrarme</button>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +71,7 @@
             </div>
             <div class="banner-buttons">
                 <div class="banner--button__registrarme">
-                    <a href="#divRegistro "> <button class="button-registrarme">Registrarme</button></a>
+                    <a href="#divRegistro "> <button id="btn-abrir-popup" class="button-registrarme btn-abrir-popup">Registrarme</button></a>
                 </div>
                 <div class="banner--button__ver_agenda">
                     <a href="#divAgenda"> <button class="banner--button__ver_agenda">Ver agenda</button>
@@ -576,7 +577,38 @@
             <input type="submit" value="Submit">
         </form>
     </div>
+    <!--Formulario para registrarse a las conferencias-->
+    <div class="overlay-2 active" id="overlay-2">
+        <div class="popup" id="popup">
+            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+            <img src="../IMG/image3.png" alt="">
+            <div class="formulario">
+                <form method="post" action="send.php" class="form">
+                    <div class="contenedor-inputs">
+                        <input class="form--position" type="text" name="nombre" placeholder="Nombre y Apellido">
+                        <input class="form--position" type="email" name="email" placeholder="E-mail">
+                        <input class="form--position" type="tell" name="telefono" placeholder="Número de teléfono">
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">     
+                            <option selected>País</option>
+                            <option value="1">Argentina</option>
+                            <option value="2">Uruguay</option>
+                            <option value="3">Brasil</option>
+                            <option value="4">Chile</option>
+                            <option value="5">Paraguay</option> 
+                            <option value="6">otros</option>
+                        </select>
 
+                    </div>
+                    <input type="submit" class="btn-submit" value="Registrarme">
+                    
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+    <!--Formulario diego-->
+    <!--
     <article>
 
         <div class="sponsors" id="divRegistro">
@@ -588,8 +620,10 @@
                         d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
                     </svg>
                 </div>
+-->
 
                 <!--Formulario Inscripcion-->
+                <!--
                 <div class="formulario">
                     <form method="post" action="send.php" class="form">
                         <input class="form--position" type="text" name="nombre" placeholder="Nombre y Apellido">
@@ -610,7 +644,9 @@
                 </div>
             </div>
         </div>
+    -->
         <!--Captcha 2-->
+        <!--
     <div text align="Center">
         <form action="?" method="POST">
             <div class="g-recaptcha" data-sitekey="your_site_key"></div>
@@ -620,6 +656,7 @@
     </div>
 
     </article>
+    -->
 
     
 
@@ -675,6 +712,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
     <script src="./main.js"></script>
+    <script src="./popup.js"></script>
 </body>
 
 </html>

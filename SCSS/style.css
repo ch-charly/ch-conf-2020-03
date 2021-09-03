@@ -681,6 +681,135 @@ body {
   margin: 10px;
 }
 
+/* ------------------------- */
+/* POPUP */
+/* ------------------------- */
+.overlay-2 {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: hidden;
+}
+
+.overlay-2 .active {
+  visibility: visible;
+}
+
+.popup {
+  background: #121212;
+  color: #E4FF22;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  font-family: HelveticaNeue-Light;
+  padding: 20px;
+  text-align: center;
+  width: 600px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  opacity: 0;
+}
+
+.btn-cerrar-popup {
+  font-size: 16px;
+  line-height: 16px;
+  display: block;
+  text-align: right;
+  color: #fff;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.popup .btn-cerrar-popup:hover {
+  color: #888;
+}
+
+.popup img {
+  height: auto;
+  width: auto;
+  padding: 25px;
+  /*opacity: 0;*/
+}
+
+.popup form .contenedor-inputs {
+  opacity: 0;
+}
+
+.popup form .contenedor-inputs input {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 52px;
+  font-size: 18px;
+  line-height: 52px;
+  text-align: center;
+  border: 1px solid #BBBBBB;
+}
+
+.popup form .btn-submit {
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  color: #000;
+  background: #E4FF22;
+  border-radius: 3px;
+  font-family: HelveticaNeue-Light;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.popup form .btn-submit:hover {
+  background: rgba(190, 40, 228, 0.9);
+}
+
+/* ------------------------- */
+/* ANIMACIONES */
+/* ------------------------- */
+.popup.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.popup.active .contenedor-inputs {
+  -webkit-animation: entradaInputs 1s linear 1s forwards;
+          animation: entradaInputs 1s linear 1s forwards;
+}
+
+@-webkit-keyframes entradaInputs {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes entradaInputs {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /*Media query*/
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
