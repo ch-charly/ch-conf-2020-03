@@ -421,6 +421,13 @@ body {
                 margin-top: 15px;
                 font-family: HelveticaNeue-Light;
             }
+            .enviar{
+                color: $color-dark;
+                background: $color-two;
+                max-width: min-content;
+                align-self: flex-end;
+                border: solid 1px $color-seven;
+            }
             .form{
                 @include column;
                 .form--position{
@@ -484,6 +491,7 @@ body {
 
     }
 }
+
 /* ------------------------- */
 /* POPUP */
 /* ------------------------- */
@@ -533,7 +541,6 @@ body {
 	height: auto;
     width: auto;
     padding: 25px;
-	/*opacity: 0;*/
 }
 
 .popup form .contenedor-inputs {

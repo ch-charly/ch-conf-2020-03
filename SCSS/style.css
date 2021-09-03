@@ -588,6 +588,17 @@ body {
   font-family: HelveticaNeue-Light;
 }
 
+.sponsors .sponsors-position .formulario .enviar {
+  color: #121212;
+  background: #E4FF22;
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border: solid 1px #FFFF00;
+}
+
 .sponsors .sponsors-position .formulario .form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -742,7 +753,6 @@ body {
   height: auto;
   width: auto;
   padding: 25px;
-  /*opacity: 0;*/
 }
 
 .popup form .contenedor-inputs {
